@@ -1,34 +1,21 @@
----
-title: Template
-author: Zuletzt bearbeitet von Alexander Bazo
-documentclass: scrartcl
-classoption:
-  - a4paper
-header-includes: |
-    \usepackage{german} 
-    \usepackage[a4paper,left=2.5cm, right=2.5cm,top=2.5cm, bottom=3cm]{geometry}
-    \usepackage{fancyhdr}
-    \usepackage{graphicx}
-    \pagestyle{fancy}
-    \fancyhf{}
-    \rhead{OOP WS 2020/21}
-    \lhead{U00 | Template}
-    \cfoot{\includegraphics[height=2cm]{docs/footer.png}}
-    \fancypagestyle{plain}{
-      \fancyhf{}
-      \rhead{OOP WS 2020/21}
-      \lhead{U00 | Template}
-      \cfoot[C]{\includegraphics[height=2cm]{docs/footer.png}}}
----
+# U09 | Pyramide
+
+Ihr Programm soll eine Pyramide zeichnen, die aus einzelnen Ziegeln besteht, die in horizontalen Linien angeordnet werden. Die Anzahl der einzelnen Blöcke nimmt um einen Block pro Reihe ab:
+
+| Pyramide |
+|:----:|
+| ![Pyramid](./docs/u03-pyramide.png) |
 
 
-# Template für Übungsaufgaben 
+Die Pyramide soll am unteren Ende der Zeichenfläche stehen und in der Mitte zentriert werden. Verwenden Sie mindestens die folgenden Konstanten:
 
-## Wichtige Informationen zur Bearbeitung der Aufgabe 
- - [Link zu wichtiger Ressource](https://www.uni-regensburg.de/sprache-literatur-kultur/medieninformatik/)
+- `BRICK_WIDTH` für die Breite der Ziegel (30).
 
-## Starterpaket
+- `BRICK_HEIGHT` für die Höhe der Ziegel (12).
 
-Ein vorbereitetes Starterpaket zur selbständigen Implementierung der Aufgabe finden Sie [hier](https://github.com/OOP-Ubungen-WS2020-21/U00-Template-fuer-Aufgaben/archive/Starterpaket.zip).
+- `BRICKS_IN_BASE` für die Anzahl der Ziegel der untersten Reihe (14).
 
-## Text
+Die angegebenen Zahlen entsprechen der Pyramide auf dem Screenshot, aber Ihre Pyramide muss für unterschiedliche Werte korrekt funktionieren.
+
+**Tipp zur Herangehensweise:** Versuchen Sie zuerst, einen Stapel aus einzelnen Ziegeln zu erzeugen. Modifizieren Sie diesen Code dann, um
+eine Wand zu erzeugen (und denken Sie daran, die *Decomposition*-Methode anzuwenden). Anschließend modifizieren Sie diesen Code, so dass in jeder Reihe ein Ziegel mehr bzw. weniger gesetzt wird (je nachdem, ob Sie die Pyramide von oben oder von unten bauen). Zum Schluss müssen die einzelnen Ziegelreihen noch zentriert werden, d.h. Sie müssen den passenden Startpunkt für jede Reihe berechnen.
